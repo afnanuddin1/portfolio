@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!-- Single-page portfolio — Afnan Uddin · CSCI 355 Project 1 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Makes the site scale correctly on phones (REQUIRED for responsiveness) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Afnan Uddin — Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Afnan Uddin, a full-stack developer and Computer Science student at CUNY Queens College." />
+
+  <!-- Google Fonts: Fraunces (display serif), Plus Jakarta Sans (body), Space Mono (labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!--
+    SKIP LINK (accessibility): lets keyboard / screen-reader users jump
+    straight to the content instead of tabbing through the whole nav.
+    It is visually hidden until focused.
+  -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ====================== HEADER / NAVIGATION ====================== -->
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a href="#top" class="nav__brand">
+        <span class="nav__mark">AU</span>
+        <span class="nav__brandtext">Afnan&nbsp;Uddin</span>
+      </a>
+
+      <!-- Hamburger button (shown on mobile). JS toggles aria-expanded. -->
+      <button class="nav__toggle" id="navToggle"
+              aria-label="Open navigation menu"
+              aria-expanded="false" aria-controls="navMenu">
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#about"      class="nav__link">About</a></li>
+        <li><a href="#skills"     class="nav__link">Skills</a></li>
+        <li><a href="#projects"   class="nav__link">Projects</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#contact"    class="nav__link">Contact</a></li>
+        <li>
+          <!-- Light / dark theme toggle -->
+          <button class="theme-toggle" id="themeToggle"
+                  aria-label="Switch to dark theme" title="Toggle theme">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================ HERO / HOME ============================ -->
+    <section class="hero" id="home">
+      <div class="hero__inner">
+        <p class="eyebrow reveal">Full-Stack Developer · CS @ Queens College</p>
+        <h1 class="hero__title reveal">
+          I build software that<br />
+          <span class="hero__accent">ships and scales.</span>
+        </h1>
+        <p class="hero__lede reveal">
+            I’m Afnan Uddin — a full-stack developer who turns messy, real-world
+          problems into reliable systems, from payment-compliant transaction
+          platforms to AI tools that cut query time by 70%.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#projects" class="btn btn--primary">View my work</a>
+          <a href="#contact"  class="btn btn--ghost">Get in touch</a>
+          <a href="Afnan_Uddin_Resume.pdf" class="btn btn--ghost" download>Download résumé ↓</a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">scroll ↓</div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section" id="about">
+      <p class="section__label reveal">01 — About</p>
+      <div class="about__grid">
+        <h2 class="section__title reveal">
+          A developer who cares about the parts users never see.
+        </h2>
+        <div class="about__body reveal">
+          <p>
+            I’m a Computer Science student at CUNY Queens College (B.A., December 2026)
+            and a full-stack developer. I like working across the whole stack —
+            from database row-level security to the button a user actually clicks.
+          </p>
+          <p>
+            Recently I’ve been building a real-estate transaction platform where
+            correctness isn’t optional: money movement, legal compliance, and a
+            nine-state workflow all have to hold together. I’ve also shipped
+            machine-learning tools, closed real security findings, and led a
+            front-end team in a high-volume retail environment.
+          </p>
+          <p>
+            I’m currently looking for <strong>software engineering / full-stack
+            roles</strong> starting in 2026.
+          </p>
+          <ul class="about__facts">
+            <li><span>Based in</span> New York, New York</li>
+            <li><span>Focus</span> Full-stack · backend · ML</li>
+            <li><span>Graduating</span> December 2026</li>
+            <li><span>Open to</span> SWE / full-stack roles</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SKILLS ============================== -->
+    <section class="section" id="skills">
+      <p class="section__label reveal">02 — Skills &amp; Tools</p>
+      <h2 class="section__title reveal">What I work with</h2>
+
+      <div class="skills">
+        <div class="skills__group reveal">
+          <h3 class="skills__heading">Languages</h3>
+          <ul class="tags">
+            <li>Java</li><li>Python</li><li>TypeScript</li><li>JavaScript</li>
+            <li>C / C++</li><li>SQL</li><li>HTML / CSS</li><li>MIPS Assembly</li>
+          </ul>
+        </div>
+        <div class="skills__group reveal">
+          <h3 class="skills__heading">Frameworks &amp; Libraries</h3>
+          <ul class="tags">
+            <li>React</li><li>Next.js</li><li>Node.js</li><li>FastAPI</li>
+            <li>Spring Boot</li><li>scikit-learn</li><li>SQLAlchemy</li>
+            <li>Pydantic</li><li>Streamlit</li><li>Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="skills__group reveal">
+          <h3 class="skills__heading">Databases</h3>
+          <ul class="tags">
+            <li>PostgreSQL</li><li>Supabase</li><li>Redis</li>
+            <li>MySQL</li><li>SQLite</li>
+          </ul>
+        </div>
+        <div class="skills__group reveal">
+          <h3 class="skills__heading">Tools &amp; Platforms</h3>
+          <ul class="tags">
+            <li>Git</li><li>Docker Compose</li><li>REST APIs</li>
+            <li>nginx</li><li>Stripe</li><li>Prompt Engineering</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= PROJECTS ============================= -->
+    <section class="section" id="projects">
+      <p class="section__label reveal">03 — Selected Projects</p>
+      <h2 class="section__title reveal">Things I’ve built</h2>
+
+      <!-- Filter buttons — real JS interactivity -->
+      <div class="filter" role="group" aria-label="Filter projects by category">
+        <button class="filter__btn is-active" data-filter="all">All</button>
+        <button class="filter__btn" data-filter="fullstack">Full-stack</button>
+        <button class="filter__btn" data-filter="ml">Machine Learning</button>
+      </div>
+
+      <div class="projects" id="projectGrid">
+
+        <!-- PROJECT CARD  -->
+        <article class="card reveal" data-category="fullstack">
+          <p class="card__tag">Full-stack</p>
+          <h3 class="card__title">Rellia — Real-Estate Transaction Platform</h3>
+          <p class="card__desc">
+            A platform that coordinates 25-step residential transactions across
+            sellers, buyers, attorneys, lenders, and title agents. Built a
+            state-machine workflow with 9 statuses and a Stripe integration that
+            keeps platform fees strictly separate from escrow funds (IOLA / RESPA
+            compliant). Closed 16 security findings including IDOR and missing RLS.
+          </p>
+          <ul class="card__stack">
+            <li>Next.js</li><li>TypeScript</li><li>Supabase</li>
+            <li>Postgres + RLS</li><li>Stripe</li><li>Tailwind</li>
+          </ul>
+          <div class="card__links">
+            <a href="https://www.relliahomes.com/" target="_blank" rel="noopener noreferrer">Live site ↗</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="ml">
+          <p class="card__tag">Machine Learning</p>
+          <h3 class="card__title">Intelligent SQL Copilot</h3>
+          <p class="card__desc">
+            An AI assistant that turns natural language into optimized PostgreSQL,
+            cutting query development time ~70% and erroneous queries 40%. A
+            query-analysis pipeline parses EXPLAIN ANALYZE to detect sequential
+            scans and a Redis cache cuts redundant AI calls by 60%.
+          </p>
+          <ul class="card__stack">
+            <li>Python</li><li>FastAPI</li><li>PostgreSQL</li>
+            <li>Redis</li><li>React</li><li>Docker</li>
+          </ul>
+          <div class="card__links">
+            <a href="https://github.com/afnanuddin1/intelligent-sql-copilot" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="ml">
+          <p class="card__tag">Machine Learning</p>
+          <h3 class="card__title">Airbnb Price Prediction App</h3>
+          <p class="card__desc">
+            An end-to-end ML pipeline predicting nightly Airbnb prices, reducing
+            mean absolute error ~20% and deployment time 50% via automated ETL,
+            feature engineering, and a containerized random-forest model.
+          </p>
+          <ul class="card__stack">
+            <li>Python</li><li>Pandas</li><li>scikit-learn</li>
+            <li>Streamlit</li><li>SQLite</li>
+          </ul>
+          <div class="card__links">
+            <a href="https://github.com/afnanuddin1/airbnb-price-predictor" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-category="ml">
+          <p class="card__tag">Machine Learning</p>
+          <h3 class="card__title">Spam Email Detector</h3>
+          <p class="card__desc">
+            A classifier reaching 98% accuracy and a 0.94 F1 score on the UCI SMS
+            Spam dataset. Used TF-IDF vectorization and compared Naive Bayes vs.
+            logistic regression, tuning hyperparameters with GridSearchCV.
+          </p>
+          <ul class="card__stack">
+            <li>Python</li><li>scikit-learn</li><li>TF-IDF</li>
+          </ul>
+          <div class="card__links">
+            <a href="https://github.com/afnanuddin1/spam-email-detector" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================ EXPERIENCE ============================ -->
+    <section class="section" id="experience">
+      <p class="section__label reveal">04 — Experience</p>
+      <h2 class="section__title reveal">Where I’ve worked</h2>
+
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <div class="timeline__head">
+            <h3 class="timeline__role">Full-Stack Developer</h3>
+            <span class="timeline__date">Mar 2026 — Present</span>
+          </div>
+          <p class="timeline__org">Rellia · Real-Estate Transaction Platform</p>
+          <p class="timeline__desc">
+            Built the platform end-to-end in Next.js, TypeScript, and Supabase;
+            engineered a 9-status state machine enforcing legal/financial rules,
+            integrated Stripe with webhook handling, and resolved 16 security
+            audit findings across the API layer.
+          </p>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__head">
+            <h3 class="timeline__role">Front End Manager</h3>
+            <span class="timeline__date">Aug 2023 — Present</span>
+          </div>
+          <p class="timeline__org">Food Emporium</p>
+          <p class="timeline__desc">
+            Led training and supervision of a 4-person team, standardized checkout
+            procedures, and streamlined front-end workflows to cut average
+            checkout time and reduce cart abandonment.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================= CONTACT ============================= -->
+    <section class="section section--contact" id="contact">
+      <p class="section__label reveal">05 — Contact</p>
+      <h2 class="section__title reveal">Let’s talk</h2>
+      <p class="contact__lede reveal">
+        Hiring, collaborating, or just curious about something I built? Send a
+        note — I read everything.
+      </p>
+
+      <!-- Contact form — validated client-side, submitted via Formspree -->
+      <form class="form reveal" id="contactForm" action="https://formspree.io/f/mykazkvr" method="POST" novalidate>
+        <div class="form__row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required />
+          <span class="form__error" data-error-for="name"></span>
+        </div>
+        <div class="form__row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+          <span class="form__error" data-error-for="email"></span>
+        </div>
+        <div class="form__row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <span class="form__error" data-error-for="message"></span>
+        </div>
+        <button type="submit" class="btn btn--primary">Send message</button>
+        <!-- aria-live announces success/failure to screen readers -->
+        <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact__cards reveal">
+        <a href="mailto:uafnan92004@gmail.com" class="contact__card">
+          <div class="contact__card-head">
+            <svg class="contact__card-icon contact__card-icon--email" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span class="contact__card-label contact__card-label--email">Email</span>
+          </div>
+          <span class="contact__card-value">uafnan92004@gmail.com</span>
+        </a>
+        <a href="tel:+19293389104" class="contact__card">
+          <div class="contact__card-head">
+            <svg class="contact__card-icon contact__card-icon--phone" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span class="contact__card-label contact__card-label--phone">Phone</span>
+          </div>
+          <span class="contact__card-value">(929) 338-9104</span>
+        </a>
+        <a href="https://github.com/afnanuddin1" target="_blank" rel="noopener" class="contact__card">
+          <div class="contact__card-head">
+            <svg class="contact__card-icon contact__card-icon--github" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.745 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <span class="contact__card-label contact__card-label--github">GitHub</span>
+          </div>
+          <span class="contact__card-value">github.com/afnanuddin1</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Afnan Uddin. Built from scratch with HTML, CSS &amp; JavaScript.</p>
+    <a href="#top" class="footer__top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
